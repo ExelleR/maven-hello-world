@@ -71,7 +71,8 @@ steps:
     repository: 'exeller/alien_project'
     command: 'push'
 - task: Docker@2
+  displayName: "Docker Run"
   inputs:
     containerRegistry: 'ilya_dockerhub'
     command: 'start'
-    container: 'exeller/alien_project:latest'
+    container: 'alien_project'
