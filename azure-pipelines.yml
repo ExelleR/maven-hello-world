@@ -80,4 +80,4 @@ steps:
   inputs:
     containerRegistry: 'ilya_dockerhub'
     command: 'start'
-    container: 'exeller/alien_project:$(Build.BuildId)'
+    container: 'alien_project:$(Build.BuildId)'
