@@ -75,9 +75,13 @@ steps:
     containerRegistry: 'ilya_dockerhub'
     repository: 'exeller/alien_project'
     command: 'push'
+
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: '17.09.0-ce'
 - task: Docker@2
   displayName: "Docker Run"
   inputs:
     containerRegistry: 'ilya_dockerhub'
     command: 'start'
-    container: 'alien_project:$(Build.BuildId)'
+    container: 'alien_project:$(Build.BuildId)'    
