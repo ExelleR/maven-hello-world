@@ -27,16 +27,17 @@ steps:
     sonarQubeRunAnalysis: false
     sqMavenPluginVersionChoice: 'latest'
 
-# - task: Maven@3
-#   displayName: "Compile"
-#   inputs:
-#     mavenPomFile: './my-app/pom.xml'
-#     publishJUnitResults: false
-#     javaHomeOption: 'JDKVersion'
-#     mavenVersionOption: 'Default'
-#     mavenAuthenticateFeed: false
-#     effectivePomSkip: false
-#     sonarQubeRunAnalysis: false
+- task: Maven@3
+  displayName: "Package"
+  inputs:
+    mavenPomFile: './my-app/pom.xml'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+
 - task: PowerShell@2
   displayName: "Run programm"
   inputs:
