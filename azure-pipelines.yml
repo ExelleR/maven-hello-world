@@ -49,3 +49,8 @@ steps:
     Contents: '**/target/*.?(war|jar)'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
   
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifact: '*'
+    publishLocation: 'pipeline'
