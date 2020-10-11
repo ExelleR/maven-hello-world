@@ -79,8 +79,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      docker stop $(docker ps -a -q)
-      docker rm $(docker ps -a -q)
+      docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
 - task: Docker@2
   displayName: "Docker Run"
   inputs:
