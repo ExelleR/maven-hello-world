@@ -42,12 +42,12 @@ steps:
 #       # Run the compiled programm.
 #       cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar $(Build.ArtifactStagingDirectory)	
 
-# #       java -cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '/home/vsts/work/1/s/my-app'
-    Contents: '**/target/*.?(war|jar)'
-    TargetFolder: '/target'
+# # #       java -cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+# - task: CopyFiles@2
+#   inputs:
+#     SourceFolder: '/home/vsts/work/1/s/my-app'
+#     Contents: '**/target/*.?(war|jar)'
+#     TargetFolder: '/target'
   
 # - task: PublishPipelineArtifact@1
 #   inputs:
