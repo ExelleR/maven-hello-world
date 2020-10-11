@@ -74,4 +74,4 @@ steps:
   inputs:
     containerRegistry: 'ilya_dockerhub'
     command: 'start'
-    container: 'exeller/alien_project'
+    container: 'exeller/alien_project:latest'
