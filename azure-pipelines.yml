@@ -17,6 +17,7 @@ steps:
       # Write your PowerShell commands here.
       
       pwd
+      ls
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
