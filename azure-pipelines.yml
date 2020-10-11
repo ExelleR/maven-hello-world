@@ -14,10 +14,8 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      # Write your PowerShell commands here.
-      
-      pwd
-      ls
+      mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
 - task: Maven@3
   inputs:
     mavenPomFile: './my-app/pom.xml'
