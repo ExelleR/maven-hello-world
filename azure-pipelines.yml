@@ -43,13 +43,9 @@ steps:
 #       cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar $(Build.ArtifactStagingDirectory)	
 
 #       java -cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
-
 - task: CopyFiles@2
-  displayName: 'Copy Files to artifact staging directory'
   inputs:
-  SourceFolder: '/home/vsts/work/1/s/my-app'
-  Contents: '**/target/*.?(war|jar)'
-  TargetFolder: $(Build.ArtifactStagingDirectory)
-
-- upload: $(Build.ArtifactStagingDirectory)
-  artifact: drop
+    SourceFolder: '/home/vsts/work/1/s/my-app'
+    Contents: '**/target/*.?(war|jar)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  
