@@ -23,12 +23,11 @@ steps:
     mavenPomFile: './my-app/pom.xml'
     goals: 'compile'
     publishJUnitResults: false
-    codeCoverageToolOption: 'Cobertura'
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: true
+    sonarQubeRunAnalysis: false
     sqMavenPluginVersionChoice: 'latest'
 - task: Maven@3
   inputs:
