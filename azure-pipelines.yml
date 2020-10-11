@@ -44,4 +44,5 @@ steps:
       # Get-ChildItem -Path /home/vsts/work/1/s/my-app/target/classes -Recurse -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
       cd /home/vsts/work/1/s/my-app/target/
       ls
-      # java -cp /home/vsts/work/1/s/my-app/target/classes/com/mycompany/app/my-app-1.0-SNAPSHOT.jar 
+      java -cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar
+
