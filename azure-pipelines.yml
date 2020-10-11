@@ -80,4 +80,5 @@ steps:
   inputs:
     containerRegistry: 'ilya_dockerhub'
     command: 'start'
-    container: 'some'
+    container: 'alien_project:66'
+    repository: 'exeller/alien_project'
