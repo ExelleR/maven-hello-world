@@ -35,13 +35,14 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-# - task: PowerShell@2
-#   inputs:
-#     targetType: 'inline'
-#     script: |
-#       # Run the compiled programm.
-     
-#       java -cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Run the compiled programm.
+      cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar $(Build.ArtifactStagingDirectory)	
+
+      # java -cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
 
 
 - task: Docker@2
