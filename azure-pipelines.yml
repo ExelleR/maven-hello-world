@@ -42,4 +42,5 @@ steps:
       # Write your PowerShell commands here.
       
       Get-ChildItem -Path /home/vsts/work/1/s/my-app/target/classes -Recurse -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
-      java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+      ls /home/vsts/work/1/s/my-app/target/classes/com/mycompany/app
+      java -cp /home/vsts/work/1/s/my-app/target/classes/com/mycompany/app/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
