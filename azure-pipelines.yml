@@ -15,6 +15,7 @@ steps:
       
 
 - task: Maven@3
+  displayName: "Compile"
   inputs:
     mavenPomFile: './my-app/pom.xml'
     goals: 'compile'
@@ -26,16 +27,18 @@ steps:
     sonarQubeRunAnalysis: false
     sqMavenPluginVersionChoice: 'latest'
 
-- task: Maven@3
-  inputs:
-    mavenPomFile: './my-app/pom.xml'
-    publishJUnitResults: false
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+# - task: Maven@3
+#   displayName: "Compile"
+#   inputs:
+#     mavenPomFile: './my-app/pom.xml'
+#     publishJUnitResults: false
+#     javaHomeOption: 'JDKVersion'
+#     mavenVersionOption: 'Default'
+#     mavenAuthenticateFeed: false
+#     effectivePomSkip: false
+#     sonarQubeRunAnalysis: false
 - task: PowerShell@2
+  displayName: "Run programm"
   inputs:
     targetType: 'inline'
     script: |
@@ -54,12 +57,14 @@ steps:
 #     artifact: 'my-app-1.0-SNAPSHOT.jar'
 #     publishLocation: 'pipeline'
 - task: Docker@2
+  displayName: "Docker Buiild"
   inputs:
     containerRegistry: 'ilya_dockerhub'
     repository: 'exeller/alien_project'
     command: 'build'
     Dockerfile: '**/Dockerfile'
 - task: Docker@2
+  displayName: "Docker Push"
   inputs:
     containerRegistry: 'ilya_dockerhub'
     repository: 'exeller/alien_project'
