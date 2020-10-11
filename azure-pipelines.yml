@@ -74,6 +74,5 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'ilya_dockerhub'
-    repository: 'exeller/alien_project'
-    command: 'start' 
-
+    command: 'start'
+    arguments: 'exeller/alien_project:latest'
