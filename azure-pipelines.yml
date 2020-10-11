@@ -29,6 +29,7 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
     sqMavenPluginVersionChoice: 'latest'
+
 - task: Maven@3
   inputs:
     mavenPomFile: './my-app/pom.xml'
