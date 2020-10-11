@@ -59,3 +59,9 @@ steps:
     repository: 'exeller/alien_project'
     command: 'build'
     Dockerfile: '**/Dockerfile'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'ilya_dockerhub'
+    repository: 'exeller/alien_project'
+    command: 'push'
+
