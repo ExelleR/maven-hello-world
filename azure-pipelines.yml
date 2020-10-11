@@ -76,9 +76,7 @@ steps:
     repository: 'exeller/alien_project'
     command: 'push'
 
-- task: Docker@2
+- task: PowerShell@2
   inputs:
-    containerRegistry: 'ilya_dockerhub'
-    command: 'start'
-    container: 'alien_project:66'
-    repository: 'exeller/alien_project'
+    targetType: 'inline'
+    script: 'docker run exeller/alien_project:66'
