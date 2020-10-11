@@ -75,14 +75,9 @@ steps:
     containerRegistry: 'ilya_dockerhub'
     repository: 'exeller/alien_project'
     command: 'push'
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
+
 - task: Docker@2
-  displayName: "Docker Run"
   inputs:
     containerRegistry: 'ilya_dockerhub'
     command: 'start'
-    container: 'alien_project:$(Build.BuildId)'    
+    container: 'some'
