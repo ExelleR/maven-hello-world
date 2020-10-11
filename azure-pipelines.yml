@@ -70,4 +70,9 @@ steps:
     containerRegistry: 'ilya_dockerhub'
     repository: 'exeller/alien_project'
     command: 'push'
+ 
+- task: Docker@2
+  inputs:
+    containerRegistry: 'ilya_dockerhub'
+    command: 'start' 
 
