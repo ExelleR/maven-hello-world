@@ -20,7 +20,7 @@ steps:
       ls
 - task: Maven@3
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: './my-app/pom.xml'
     goals: 'compile'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
