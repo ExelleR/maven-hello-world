@@ -54,3 +54,9 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)'
     artifact: 'my-app-1.0-SNAPSHOT.jar'
     publishLocation: 'pipeline'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'ilya_dockerhub'
+    repository: 'exeller/alien_project'
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
