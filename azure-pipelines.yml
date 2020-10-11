@@ -52,5 +52,5 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)'
-    artifact: '*'
+    artifact: 'my-app-1.0-SNAPSHOT.jar'
     publishLocation: 'pipeline'
