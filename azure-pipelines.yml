@@ -40,10 +40,7 @@ steps:
     targetType: 'inline'
     script: |
       # Write your PowerShell commands here.
-      
-      # Get-ChildItem -Path /home/vsts/work/1/s/my-app/target/classes -Recurse -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
-      cd /home/vsts/work/1/s/my-app/target/
-      ls
+     
       java -cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
 
 
