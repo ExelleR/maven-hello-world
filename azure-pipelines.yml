@@ -35,12 +35,13 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your PowerShell commands here.
+# - task: PowerShell@2
+#   inputs:
+#     targetType: 'inline'
+#     script: |
+#       # Run the compiled programm.
      
-      java -cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+#       java -cp /home/vsts/work/1/s/my-app/target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+
 
 
