@@ -41,5 +41,4 @@ steps:
     script: |
       # Write your PowerShell commands here.
       
-      cd /home/vsts/work/1/s/my-app/target/classes
-      ls
+      Get-ChildItem -Path /home/vsts/work/1/s/my-app/target/classes -Recurse -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
